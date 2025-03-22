@@ -594,6 +594,10 @@ body.loading {
     margin-bottom: 15px;
 }
 
+.project-section a {
+    text-decoration: none; /* Remove underline */
+}
+
 .project-number {
     font-size: 17px;
     vertical-align: text-top;
