@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Fira+Mono:wght@400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div id="particles"></div>
+        <div id="loading-screen">
+            <span class="typing-effect">Hello World!</span>
+        </div>
+        <div id="lamp-container">
+            
+            <div id="icon-container">
+                <a href="index.html" class="icon-link" data-text="Home">
+                    <img src="/images/home.svg" alt="Home" class="icon-placeholder" width="30">
+                </a>
+                <a href="#aboutme" class="icon-link" data-text="About Me">
+                    <img src="/images/abtme.svg" alt="About Me" class="icon-placeholder" width="30">
+                </a>
+                <a href="#projects" class="icon-link" data-text="Projects">
+                    <img src="/images/file.svg" alt="Projects" class="icon-placeholder" width="30">
+                </a>
+                <a href="#contact-form-container" class="icon-link" data-text="Contact">
+                    <img src="/images/mail.svg" alt="Contact" class="icon-placeholder" width="25">
+                </a>
+            </div>
+            
+
+            
+            <section id="hero">
+
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h3><span id="typing-effect"></span></h3>
+                        <h2>Hi, I’m <span class="blue-text">Shainy</span><br>A Software Developer<br> Crafting Solutions with Code</h2>
+                        <p>I'm a developer who loves turning ideas into reality.<br> Whether it’s solving technical challenges or making<br> sure the design flows, I’m all about crafting solutions that work.</p>
+                        <button>Check out my portfolio!</button>
+                    </div>
+                </div>  
+
+
+            </section>
+
+            <section id="aboutme">
+                
+                <h1>
+                    <span>I’m a software developer fueled by <span class="gray">creativity</span> and <span class="gray">passion</span>,</span>  
+                    <span>solving challenges through <span class="gray">innovation</span></span>  
+                    <span>while merging <span class="gray">technical skills</span> with <span class="gray">design</span>.</span>
+                </h1>
+
+                <div class="aboutme-image-container">
+                    <div class="img-container">
+                        <img src="/images/profile-pic.png" alt="Profile Picture">
+                        <div class="aboutme-text">
+                            <p>Hey, I’m Shainy! I’m a software developer who loves mixing creativity with problem-solving. I enjoy making things look good and work well, whether it’s coding, design, or just tweaking stuff until it feels right.
+
+                                Outside of tech, I’m into anime, fighting games, and deep debates about anything and everything. I overanalyze music, get lost in fictional worlds, and love bouncing ideas off people with strong opinions. Basically, I like creating, overthinking, and occasionally breaking things just to see how they work.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="projects">
+                <div class="projects-header">
+                    <img src="/images/star.svg" alt="Spinning Placeholder" class="spinning-image">
+                    <h1>PROJECTS</h1>
+                </div>
+                <div class="project-sections">
+                    <section class="project-section">
+                        <a href="https://github.com" target="_blank">
+                            <p><span class="project-number">1 .</span>Figma Prototyping</p>
+                            <img src="/images/Fithub-portrait.png" alt="Project 1 Image" class="hover-image" width="25%">
+                            <div class="tech-stack">Figma</div>
+                        </a>
+                        <hr class="separator">
+                    </section>
+                    <section class="project-section">
+                        <a href="https://github.com" target="_blank">
+                            <p><span class="project-number">2 .</span>QuizBit Website</p>
+                            <img src="/images/Quizbit.png" alt="Project 2 Image" class="hover-image" id="quizbit" width="45%">
+                            <div class="tech-stack"> CSS &#9679; HTML</div>
+                        </a>
+                        <hr class="separator">
+                    </section>
+                    <section class="project-section">
+                        <a href="https://github.com" target="_blank">
+                            <p><span class="project-number">3 .</span>AI Story Writer</p>
+                            <img src="/images/ollama.png" alt="Project 3 Image" class="hover-image" width="45%">
+                            <div class="tech-stack">Python</div>
+                        </a>
+                        <hr class="separator">
+                    </section>
+                    <section class="project-section">
+                        <a href="https://github.com" target="_blank">
+                            <p><span class="project-number">4 .</span>EcoBloom Logo</p>
+                            <img src="/images/ecobloom.svg" alt="Project 4 Image" class="hover-image" width="45%">
+                            <div class="tech-stack">Adobe Illustrator</div>
+                        </a>
+                        <hr class="separator">
+                    </section>
+                </div>
+            </section>
+
+            <section id="contact-form-container">
+                <h1>Get in Touch</h1>
+                <form id="contact-form">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </section>
+        </div>
+        <div id="line"></div>
+        <a href="https://github.com" target="_blank">
+            <img id="image1" class="image-placeholder" src="/images/github_gr.svg" alt="Placeholder 1">
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+            <img id="image2" class="image-placeholder" src="/images/linkedin.svg" alt="Placeholder 2">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img id="image3" class="image-placeholder" src="/images/insta.svg" alt="Placeholder 3">
+        </a>
+        <script src="scripts.js"></script>
+        <footer style="text-align: center; margin: 0 250px;">
+            <hr>
+            <p>Made with love, By Shainy</p>
+        </footer>
+    </body>
+    </html>

@@ -1,0 +1,672 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #0A192F;
+}
+
+#lamp-container {
+    position: relative;
+    width: 100%;
+    min-height: 100%; /* Ensure it covers the full viewport height */
+}
+
+#lamp {
+    position: fixed; /* Fixed position to follow the viewport */
+    width: 900px; /* Diameter of the lamp effect */
+    height: 900px; /* Diameter of the lamp effect */
+    border-radius: 50%;
+    background: radial-gradient(circle, #162c4ccc 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none; /* Allow clicks to pass through */
+    mix-blend-mode: screen; /* Blend mode for the lamp effect */
+    z-index: 9999; /* Ensure it is on top of other elements */
+}
+
+
+#line {
+    position: fixed;
+    bottom: 0;
+    right: 150px; /* Adjust the distance from the right edge */
+    width: 1px; /* Line width */
+    height: 200px; /* Line height */
+    background-color: #CCD6F6; /* Line color */
+    border-radius: 5px;
+}
+
+.image-placeholder {
+    position: fixed;
+    right: 133px; /* Align with the line */
+    width: 35px; /* Image width */
+    height: auto    ; /* Image height */
+}
+
+#image1 {
+    bottom: 225px; /* Position relative to the bottom */
+}
+
+#image2 {
+    bottom: 300px; /* Position relative to the bottom */
+}
+
+#image3 {
+    bottom: 375px; /* Position relative to the bottom */
+}
+
+#hero {
+    position: relative; 
+    width: 100%; 
+    height: 625px;
+    overflow: hidden; 
+    top: 15px;
+    padding-bottom: 30px;
+    opacity: 0; /* Ensure initial opacity is 0 */
+    transform: translateY(20px); /* Ensure initial transform */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Ensure transition is applied */
+}
+
+#hero.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gray {
+    color: gray; /* Initial color is gray */
+}
+
+.blue-text {
+    color: #00BFAE; /* Initial color is gray */
+}
+
+
+
+
+
+/* navbar styles */
+
+
+
+/* navbar styles */
+
+/* navbar styles */
+
+/* navbar styles */
+
+#icon-container {
+    position: fixed; /* Make the container fixed */
+    top: 20px; /* Adjust the top position as needed */
+    left: 50%; /* Position it in the center horizontally */
+    transform: translateX(-50%); /* Center the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Gap between the icons */
+    background-color: #081323; /* Set background color */
+    padding: 10px 25px; /* Adjust padding for better spacing */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    width: fit-content; /* Make the width fit the content */
+    z-index: 10000; /* Ensure it is on top of other elements */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+}
+
+.icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Set a fixed width for the icon box */
+    height: 40px; /* Set a fixed height for the icon box */
+    background-color: transparent; /* Initial background color */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    position: relative; /* Ensure pseudo-element is positioned correctly */
+    overflow: hidden; /* Hide overflow for pseudo-element */
+    z-index: 1; /* Ensure content is above the pseudo-element */
+}
+
+.icon-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #00BFAE;
+    border-radius: 50%;
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease;
+    z-index: -1; /* Ensure it is behind the content */
+}
+
+.icon-link:hover::before {
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+}
+
+.icon-link:hover {
+    color: white; /* Ensure text color changes on hover for better visibility */
+}
+
+.icon-link.active {
+    background-color: #00BFAE; /* Change background color when active */
+}
+
+.icon-text {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the text below the icon */
+    left: 50%;
+    margin-top: 5px;
+    transform: translateX(-50%);
+    background-color: #00BFAE; /* Set background color to blue */
+    padding: 5px 10px; /* Adjust padding for better spacing */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #fff; /* Set text color to white */
+    font-family: 'Montserrat', sans-serif; /* Set font family to Montserrat */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+    white-space: nowrap; /* Prevent text from wrapping */
+    z-index: 10000; /* Ensure it is on top of other elements */
+}
+
+
+/* hero text styles */
+
+#hero h3{
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    font-family: Montserrat;
+    color: #00BFAE;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+#hero h2{
+    position: absolute;
+    top: 180px;
+    left: 250px;
+    font-family: Merriweather; /* Changed from Poppins */
+    color: #CCD6F6;
+    font-weight: 550;
+    font-size: 55px;
+}
+
+#hero p{
+    position: absolute;
+    top: 430px;
+    left: 250px;
+    font-family: Montserrat; /* Changed from Roboto */
+    color: #ccd6f6b5;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#hero button{
+    padding: 15px;
+    position: absolute;
+    top: 560px;
+    left: 250px;
+    font-family: Merriweather; /* Changed from Poppins */
+    color: #00BFAE; /* Change font color to blue */
+    font-weight: 400;
+    font-size: 19px;
+    border-radius: 5px;
+    border: 2px solid #00BFAE; 
+    background-color: transparent; 
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.5s ease; /* Add transition for smooth effect */
+    z-index: 999999999; 
+}
+
+#hero button:hover {
+    transform: scale(1.05);
+    background-color: #00BFAE; /* Add background color change */
+    color: #0A192F; /* Change text color on hover */
+    transition: all 0.5s ease;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image .img-container {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #12284A;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hero-image-container .img-container {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #12284A;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About Me Section */
+#aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    text-align: center;
+    padding-bottom: 500px;
+    overflow: hidden;
+}
+
+#aboutme h1 {
+    font-family: Merriweather, sans-serif;
+    color: gray;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0 250px;
+    transition: color 0.5s ease-out;
+    z-index: 999999;
+}
+
+/* Image & Text Container */
+.aboutme-image-container {
+    display: flex;
+    width: 900px; 
+    margin: 20px auto; /* Center it */
+    align-items: center; /* Align everything vertically */
+    margin-top: 100px;
+}
+
+/* Image Container - Now Holds Image + Text */
+.img-container {
+    display: flex; /* Allows image + text to sit next to each other */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Now takes full width of .aboutme-image-container */
+    background-color: #12284A;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    gap: 20px; /* Space between image and text */
+}
+
+/* Image Styling */
+.img-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Text Styling */
+.aboutme-text {
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    font-family: Montserrat;
+    flex: 1; /* Makes sure text takes the remaining space */
+}
+
+
+
+
+/* contact form styles */
+
+#contact-form-container {
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+    background: rgba(18, 40, 74, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px; 
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 150px;
+}
+
+#contact-form-container h1 {
+    color: #CCD6F6;
+    font-family: Merriweather; /* Changed from Bebas Neue */
+    font-size: 32px; /* Reduce the font size */
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#contact-form label {
+    color: #CCD6F6;
+    font-family: Merriweather; /* Changed from Poppins */
+    font-size: 16px; /* Reduce the font size */
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 8px; /* Reduce the padding */
+    margin-bottom: 15px; /* Reduce the margin */
+    border: 2px solid #00BFAE;
+    border-radius: 5px;
+    background-color: rgba(10, 25, 47, 0.8); /* Semi-transparent background */
+    color: #CCD6F6;
+    font-family: Montserrat; /* Changed from Roboto */
+    font-size: 14px; /* Reduce the font size */
+    resize: none; /* Prevent resizing */
+}
+
+#contact-form button {
+    padding: 12px; /* Reduce the padding */
+    font-family: Merriweather; /* Changed from Poppins */
+    color: #00BFAE;
+    font-weight: 400;
+    font-size: 17px; /* Reduce the font size */
+    border-radius: 5px;
+    border: 2px solid #00BFAE;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease; /* Add transition for smooth effect */
+}
+
+#contact-form button:hover {
+    transform: scale(1.05);
+    background-color: #00BFAE; /* Add background color change */
+    color: #0A192F; /* Change text color on hover */
+    transition: all 0.5s ease;
+}
+
+/* section styles */
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Increase transition duration */
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/*styles for the loading screen */
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0A192F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Ensure it is on top of other elements */
+    font-family: 'Fira Mono', monospace;
+    color: #CCD6F6;
+    font-size: 24px;
+}
+
+.typing-effect {
+    border-right: 2px solid #CCD6F6;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Start with width 0 */
+    animation: typing 1.5s steps(12, end), blink 0.75s step-end infinite;
+    animation-fill-mode: forwards; /* Ensure the animation stays at the end state */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 12ch; } /* Adjust width to match the length of "Hello World!" */
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #CCD6F6; }
+}
+
+.typing-effect.finished {
+    border-right: none; /* Remove the blinking cursor */
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+body.loading {
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#typing-effect {
+    border-right: 2px solid #00BFAE;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #00BFAE; }
+}
+
+/* particles styles */
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0; /* Adjust z-index to bring particles slightly forward */
+}
+
+.particle {
+    position: absolute;
+    top: -10px;
+    background-color: #CCD6F6;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: floatDown linear infinite;
+}
+
+@keyframes floatDown {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* projects section styles */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 250px;
+    margin-right: 250px;
+    text-align: left;
+    margin-top: -500px;
+}
+
+.projects-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.projects-header h1 {
+    color: #CCD6F6;
+    font-family: Anton;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.spinning-image {
+    width: 25px;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.project-sections {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-section {
+    color: #CCD6F6;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 0; /* Remove padding */
+    position: relative;
+    overflow: hidden; /* Prevent the gradient from spilling out */
+}
+
+.project-section p {
+    font-family: Anton, sans-serif;
+    font-size: 65px;
+    font-weight: 500;
+    color: #CCD6F6; /* Default text color (white) */
+    margin: 30px; /* Remove margin */
+    padding: 0; /* Remove padding */
+    margin-left: -50px; /* Move text more to the left */
+    display: inline-block; /* Ensures text is treated as inline content */
+    background: linear-gradient(to right, #CCD6F6 0%, #CCD6F6 50%, #00BFAE 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* Make the text color transparent */
+    transition: background-position 0.7s ease; /* Smooth transition */
+}
+
+.project-section:hover p {
+    background-position: -100% 0; /* Slide the gradient to the left when hovered */
+}
+
+.project-section .tech-stack {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    color: #CCD6F6;
+    margin-left: 10px; /* Align with the project title */
+    margin-top: -25px; /* Adjust spacing to keep inline with the project title */
+    margin-bottom: 15px;
+}
+
+.project-number {
+    font-size: 17px;
+    vertical-align: text-top;
+    margin-right: 26px;
+    color: #CCD6F6;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #CCD6F6;
+    width: calc(100vw - 500px); /* 100% of the viewport width minus the margins */
+    margin: 5px auto; /* Auto centers it */
+    opacity: 0.3;
+}
+
+/* Hide the image initially */
+.project-section .hover-image {
+    position: fixed;
+    right: 80px;
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, top 0.1s ease-out;
+    z-index: 9999;
+}
+
+/* Show the image when the section is hovered */
+.project-section:hover .hover-image {
+    opacity: 1;
+}
+
+/* Optional: If you want the image to always be centered vertically in the section */
+.project-section {
+    position: relative; /* Make sure the container is positioned for absolute children */
+    overflow: visible; /* Let the image overflow outside the section */
+}
+
+.project-section:nth-child(2) .hover-image,
+.project-section:nth-child(3) .hover-image {
+    border-radius: 15px; /* Add border radius for the hover images in sections 2 and 3 */
+}
+
+.project-section:nth-child(1) .hover-image{
+    margin-right: 100px;
+}
+
+/* footer styles */
+
+footer {
+    text-align: center;
+    margin: 0 250px;
+    padding: 20px 0;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: #CCD6F6;
+    font-family: Montserrat;
+}
