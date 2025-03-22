@@ -25,30 +25,30 @@ body, html {
 #line {
     position: fixed;
     bottom: 0;
-    right: 150px; /* Adjust the distance from the right edge */
-    width: 1px; /* Line width */
-    height: 200px; /* Line height */
-    background-color: #CCD6F6; /* Line color */
+    right: 150px; 
+    width: 1px; 
+    height: 200px; 
+    background-color: #CCD6F6; 
     border-radius: 5px;
 }
 
 .image-placeholder {
     position: fixed;
-    right: 133px; /* Align with the line */
-    width: 35px; /* Image width */
-    height: auto    ; /* Image height */
+    right: 133px; 
+    width: 35px; 
+    height: auto    ; 
 }
 
 #image1 {
-    bottom: 225px; /* Position relative to the bottom */
+    bottom: 225px; 
 }
 
 #image2 {
-    bottom: 300px; /* Position relative to the bottom */
+    bottom: 300px; 
 }
 
 #image3 {
-    bottom: 375px; /* Position relative to the bottom */
+    bottom: 375px;
 }
 
 #hero {
@@ -60,7 +60,7 @@ body, html {
     padding-bottom: 30px;
     opacity: 0; /* Ensure initial opacity is 0 */
     transform: translateY(20px); /* Ensure initial transform */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Ensure transition is applied */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 #hero.visible {
@@ -77,35 +77,24 @@ body, html {
 }
 
 
-
-
-
-/* navbar styles */
-
-
-
-/* navbar styles */
-
-/* navbar styles */
-
 /* navbar styles */
 
 #icon-container {
     position: fixed; /* Make the container fixed */
-    top: 20px; /* Adjust the top position as needed */
-    left: 50%; /* Position it in the center horizontally */
+    top: 20px; 
+    left: 50%;
     transform: translateX(-50%); /* Center the container */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px; /* Gap between the icons */
-    background-color: #081323; /* Set background color */
-    padding: 10px 25px; /* Adjust padding for better spacing */
-    border-radius: 10px; /* Optional: Add border radius for rounded corners */
-    width: fit-content; /* Make the width fit the content */
-    z-index: 10000; /* Ensure it is on top of other elements */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease; /* Smooth transition */
+    background-color: #081323; 
+    padding: 10px 25px; 
+    border-radius: 10px; 
+    width: fit-content; 
+    z-index: 10000; 
+    opacity: 0; 
+    transition: opacity 1s ease; 
 }
 
 .icon-link {
